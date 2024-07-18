@@ -1,0 +1,6 @@
+Moon Modeler(Object/Data Modeling)
+app.eraser.io
+
+.gitkeep is used to keep the empty files/folders on the github repository
+
+.gitignore generator
