@@ -4,3 +4,20 @@ app.eraser.io
 .gitkeep is used to keep the empty files/folders on the github repository
 
 .gitignore generator
+
+/register => Body -> form-data
+    - fullname
+    - username
+    - email
+    - password
+    - avatar
+    - coverImage
+
+/login => raw -> JSON
+    - "email": "email@example.com",
+    - "password": "password",
+
+Also add the `cookies` and Allowlist
+
+/logout
+    - successful
