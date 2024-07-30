@@ -5,7 +5,7 @@ app.eraser.io
 
 .gitignore generator
 
-/register => Body -> form-data
+/register (POST) => Body -> form-data
     - fullname
     - username
     - email
@@ -13,11 +13,34 @@ app.eraser.io
     - avatar
     - coverImage
 
-/login => raw -> JSON
+/login (POST) => raw -> JSON
     - "email": "email@example.com",
     - "password": "password",
 
-Also add the `cookies` and Allowlist
-
-/logout
+/logout (POST)
     - successful
+
+/refresh-token (POST) => Body -> raw -> JSON
+    - "refreshToken": "refreshToken"
+
+/change-password (POST) => Body -> raw -> JSON
+    - "oldPassword": "oldPassword",
+    - "newPassword": "newPassword"
+
+/current-user (GET)
+
+
+/update-account (PATCH) => Body -> raw -> JSON
+    - "email": "email@example.com",
+    - "fullname": "Full Name"
+
+/avatar (PATCH) => Body -> form-data
+    - "avatar": "file"
+
+/coverImage (PATCH) => Body -> form-data
+    - "coverImage": "file"
+
+/c/:username (GET) => Path variable
+    - "username": "username"
+
+/history (GET) => 
